@@ -1,0 +1,26 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:all",
+    "tslint-react"
+  ],
+  "rules": {
+    "no-console": false,
+    "ordered-imports": false,
+    "typedef": false,
+    "prefer-function-over-method": false,
+    "completed-docs": false,
+    "no-unsafe-any": false,
+    "no-string-literal": false,
+    "member-ordering": false,
+    "strict-boolean-expressions": false,
+    "jsx-curly-spacing": false,
+    "jsx-no-multiline-js": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "node_modules",
+      "*.js"
+    ]
+  }
+}
