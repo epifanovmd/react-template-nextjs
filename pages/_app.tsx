@@ -1,24 +1,28 @@
-import App, { Container } from 'next/app'
-import React from 'react'
-import withReduxStore from '../lib/with-redux-store'
-import { Provider } from 'react-redux'
-import { IAppState } from "../components/counter/container";
-import { Store } from "redux";
+import App, {Container} from "next/app";
+import React from "react";
+import withReduxStore from "../lib/with-redux-store";
+import {Provider} from "react-redux";
+import {Store} from "redux";
+import {IAppState} from "../src/store/IAppState";
+import "../src/assets/clearfix.scss";
 
 interface IComponentWithStoreProps {
-    reduxStore: Store<IAppState>;
+  store: Store<IAppState>;
 }
 
 class MyApp extends App<IComponentWithStoreProps> {
-    render() {
-        const {Component, pageProps, reduxStore} = this.props;
-        return (
-            <Container>
-                <Provider store={ reduxStore }>
-                    <Component {...pageProps} />
-                </Provider>
-            </Container>
-        )
-    }
+  public render(): JSX.Element {
+    const {Component, pageProps, store} = this.props;
+
+    return (
+      <Container>
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
+      </Container>
+    );
+  }
 }
-export default withReduxStore(MyApp)
+
+//tslint:disable-next-line:no-default-export
+export default withReduxStore(MyApp);

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,600,900');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,900');
+$primary-color: #3DA4CE;
+@import "../../node_modules/loaders.css/src/loaders";
+
+.w-full {
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 544px) {
+  .container {
+    max-width: 576px
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 940px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px
+  }
+}
