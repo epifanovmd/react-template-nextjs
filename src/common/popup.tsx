@@ -7,7 +7,6 @@ class Popup {
     eventRegister.emitEvent(EventNames.notification, {
       title: "Ошибка",
       subtitle: getExceptionText(e),
-      iconType: "error",
     } as INotificationPopupData);
   }
 
@@ -15,7 +14,6 @@ class Popup {
     eventRegister.emitEvent(EventNames.notification, {
       title: "Внимание",
       subtitle: title,
-      iconType: "success",
     } as INotificationPopupData);
   }
 }

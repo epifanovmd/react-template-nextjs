@@ -2,9 +2,7 @@ import {SimpleThunk} from "../../common/simpleThunk";
 import {MainPageActions} from "./mainPageActions";
 import {Dispatch} from "react";
 import {requestRepository} from "../../api/RequestsRepository.g";
-import {EventNames, eventRegister} from "../../common/eventRegister";
-import {getExceptionText} from "../../common/exceptionType";
-import {INotificationPopupData} from "../../components/popupNotification/popupNotification";
+import {popup} from "../../common/popup";
 
 export class MainPageThunk {
   static getUsers(): SimpleThunk {
@@ -15,11 +13,7 @@ export class MainPageThunk {
         const result = await requestRepository.usersApiRequest.get();
         dispatch(MainPageActions.getUsers.done({params, result}));
       } catch (error) {
-        eventRegister.emitEvent(EventNames.notification, {
-          title: "Ошибка",
-          subtitle: getExceptionText(error.type),
-          iconType: "error",
-        } as INotificationPopupData);
+        popup.error(error.type);
         dispatch(MainPageActions.getUsers.failed({params, error}));
       }
     };

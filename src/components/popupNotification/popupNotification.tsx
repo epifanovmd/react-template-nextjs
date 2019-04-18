@@ -11,10 +11,9 @@ interface IState extends INotificationPopupData {
 export interface INotificationPopupData {
   title: string;
   subtitle: string;
-  iconType: "none" | "error" | "warning" | "success";
 }
 
-export class PopupNotification extends Component<IEmpty, IState> {
+export class NotificationPopup extends Component<IEmpty, IState> {
   protected listenerId: string;
 
   constructor(props: IEmpty) {
@@ -23,7 +22,6 @@ export class PopupNotification extends Component<IEmpty, IState> {
       isOpen: false,
       subtitle: "",
       title: "",
-      iconType: "none",
     };
     this.listenerId = "";
   }
@@ -39,7 +37,7 @@ export class PopupNotification extends Component<IEmpty, IState> {
   }
 
   render(): JSX.Element | null {
-    const {title, subtitle, iconType} = this.state;
+    const {title, subtitle} = this.state;
     if (!this.state.isOpen) {
       return null;
     }
@@ -53,9 +51,6 @@ export class PopupNotification extends Component<IEmpty, IState> {
         center={true}
       >
         <div className={"popup"}>
-          <div className={"popup__icon"}>
-            <div className={`popup__icon-${iconType}`}/>
-          </div>
           <div className={"popup__title"}>{title}</div>
           <div className={"popup__subtitle"}>{subtitle}</div>
           <div className={"popup__buttons"}>

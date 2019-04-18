@@ -4,6 +4,7 @@ import {Main} from "../src/modules/main/Main";
 import fetch from "isomorphic-unfetch";
 import {NextContext} from "next";
 import {Users} from "../src/api/dto/Users.g";
+import {NotificationPopup} from "../src/components/popupNotification/popupNotification";
 
 interface IProps {
   users: Users[];
@@ -29,6 +30,7 @@ export default class Index extends React.Component<IProps> {
           <meta name="description" content={"Next App"} />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
+        <NotificationPopup />
         <Main initialProps={{users}} />
       </>
     );
