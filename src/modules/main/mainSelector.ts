@@ -1,4 +1,4 @@
-import {IAppState} from "src/store/IAppState";
+import {IAppState} from "../../store/IAppState";
 import {IMainPageDispatchProps, IMainPageStateProps} from "./Main";
 import {MainPageThunk} from "./mainPageThunk";
 import {Dispatch} from "react";
