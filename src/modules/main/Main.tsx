@@ -23,11 +23,11 @@ class MainStatic extends Component<TProps> {
   }
 
   public render(): JSX.Element {
-    const {users, initialProps} = this.props;
+    const {users} = this.props;
 
     return (
       <>
-        <MainComponent users={initialProps ? initialProps.users : users} />
+        <MainComponent users={users} />
       </>
     );
   }
