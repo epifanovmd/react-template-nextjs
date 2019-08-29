@@ -17,7 +17,7 @@ type TProps = IProps &
 
 class MainStatic extends Component<TProps> {
   componentDidMount(): void {
-    this.props.getUsers();
+    // this.props.getUsers();
     const {setInitialUsers, initialProps} = this.props;
     setInitialUsers(initialProps.users);
   }

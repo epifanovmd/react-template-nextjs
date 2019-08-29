@@ -5,11 +5,10 @@ import {SsrActions} from "../../store/ssrActions";
 import {Users} from "../../api/dto/Users.g";
 
 class MainSelector {
-  mapState = ({mainPage, ssr}: IAppState) => (
+  mapState = ({mainPage}: IAppState) => (
     {
       users: mainPage.users,
       usersLoadState: mainPage.usersLoadState,
-      ssrUsers: ssr.users,
     }
   );
 
