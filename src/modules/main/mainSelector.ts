@@ -1,8 +1,8 @@
 import {IAppState} from "../../store/IAppState";
 import {MainPageThunk} from "./mainPageThunk";
 import {Dispatch} from "react";
-import {SsrActions} from "../../store/ssrActions";
 import {Users} from "../../api/dto/Users.g";
+import {SsrActions} from "./mainPageActions";
 
 class MainSelector {
   mapState = ({mainPage}: IAppState) => (

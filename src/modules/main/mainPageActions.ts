@@ -5,3 +5,7 @@ import {Users} from "../../api/dto/Users.g";
 export class MainPageActions {
   static getUsers = actionCreator.async<IEmpty, Users[], Error>("Main/GET_USERS");
 }
+
+export class SsrActions {
+  static ssrSetUsers = actionCreator<Users[]>("ssr/GET_USERS");
+}
