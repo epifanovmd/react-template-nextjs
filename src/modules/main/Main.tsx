@@ -1,19 +1,9 @@
 import React, {Component} from "react";
 import {mainSelector} from "./mainSelector";
 import {connect} from "react-redux";
-import {LoadState} from "../../common/loadState";
 import {MainComponent} from "../../components/mainComponent/mainComponent";
 import "../../assets/clearfix.scss";
 import {Users} from "../../api/dto/Users.g";
-
-export interface IMainPageStateProps {
-  users: Users[];
-  usersLoadState: LoadState;
-}
-
-export interface IMainPageDispatchProps {
-  getUsers: () => void;
-}
 
 interface IProps {
   initialProps: {
@@ -21,11 +11,15 @@ interface IProps {
   }
 }
 
-type TProps = IProps & IMainPageStateProps & IMainPageDispatchProps;
+type TProps = IProps &
+  ReturnType<typeof mainSelector.mapState> &
+  ReturnType<typeof mainSelector.mapDispatch>;
 
 class MainStatic extends Component<TProps> {
   componentDidMount(): void {
     this.props.getUsers();
+    const {setInitialUsers, initialProps} = this.props;
+    setInitialUsers(initialProps.users);
   }
 
   public render(): JSX.Element {
