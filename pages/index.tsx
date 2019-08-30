@@ -2,9 +2,9 @@ import React from "react";
 import Head from "next/head";
 import {Main} from "../src/modules/main/Main";
 import fetch from "isomorphic-unfetch";
-import {NextContext} from "next";
 import {Users} from "../src/api/dto/Users.g";
 import {NotificationPopup} from "../src/components/popupNotification/popupNotification";
+import {SsrActions} from "../src/modules/main/mainPageActions";
 
 interface IProps {
   users: Users[];
@@ -12,15 +12,15 @@ interface IProps {
 
 //tslint:disable-next-line:no-default-export
 export default class Index extends React.Component<IProps> {
-  public static async getInitialProps({}: NextContext): Promise<any> {
+  public static async getInitialProps({ reduxStore }: any): Promise<any> {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const users = await res.json();
+    reduxStore.dispatch(SsrActions.ssrSetUsers(users));
 
-    return {users};
+    return {};
   }
 
   public render(): JSX.Element {
-    const {users} = this.props;
     return (
       <>
         <Head>
@@ -31,7 +31,7 @@ export default class Index extends React.Component<IProps> {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <NotificationPopup />
-        <Main initialProps={{users}} />
+        <Main/>
       </>
     );
   }
