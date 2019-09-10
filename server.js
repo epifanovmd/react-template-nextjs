@@ -63,7 +63,7 @@ app
       if (err) {
         throw err
       }
-      console.log(`> Ready on port ${port} [${env}]`)
+      console.log(`> Ready on http://localhost:${port}/ [${env}]`)
     })
   })
   .catch(err => {

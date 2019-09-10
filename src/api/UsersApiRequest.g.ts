@@ -1,17 +1,14 @@
 /*tslint:disable*/
 import {BaseRequest} from "./BaseRequest";
 import {Users} from "./dto/Users.g";
+import {RequestType} from "../common/requestType";
 
 export class UsersApiRequest extends BaseRequest {
-  constructor(protected baseurl: string) {
-    super(baseurl);
-  }
-
   get(config?: Object): Promise<Users[]> {
     return this.fetch(
-      `api/users`,
+      `/api/users`,
       Object.assign({
-        method : "GET"
+        method: RequestType.GET
       }, config))
       .then((response) => response.json())
       .catch(BaseRequest.handleError);

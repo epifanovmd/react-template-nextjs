@@ -1,10 +1,7 @@
 import {UsersApiRequest} from "./UsersApiRequest.g";
 
-export class RequestsRepository {
-  usersApiRequest = new UsersApiRequest(this.baseurl);
-
-  constructor(private baseurl: string) {
-  }
+export class RequestsRepository{
+  usersApiRequest = new UsersApiRequest();
 }
 
-export const requestRepository = new RequestsRepository("");
+export const requestRepository = new RequestsRepository();

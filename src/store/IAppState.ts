@@ -1,5 +1,5 @@
-import {IMainState} from "../modules/main/IMainState";
+import {IUsersState} from "../modules/users/IUsersState";
 
 export interface IAppState {
-  mainPage: IMainState;
+  usersPage: IUsersState;
 }

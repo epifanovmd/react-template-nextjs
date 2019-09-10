@@ -1,6 +1,6 @@
 import {combineReducers, Reducer} from "redux";
 import {IAppState} from "../IAppState";
-import {mainPageReducer} from "../../modules/main/mainReducer";
+import {mainPageReducer} from "../../modules/users/usersReducer";
 
 export type Reducers<T> = {
   [P in keyof T]: Reducer<T[P]>;
@@ -8,7 +8,7 @@ export type Reducers<T> = {
 
 export function createMainReduce(): Reducer<IAppState> {
   const _reducers: Reducers<IAppState> = {
-    mainPage: mainPageReducer,
+    usersPage: mainPageReducer,
   };
 
   return combineReducers(_reducers);
