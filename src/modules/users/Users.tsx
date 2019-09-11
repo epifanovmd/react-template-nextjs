@@ -1,8 +1,8 @@
 import React, {Component} from "react";
 import {usersSelector} from "./usersSelector";
 import {connect} from "react-redux";
-import {MainComponent} from "../../components/mainComponent/mainComponent";
 import "../../assets/clearfix.scss";
+import {UserList} from "../../components/userList/userList";
 
 interface IProps {
 }
@@ -22,7 +22,7 @@ class UsersStatic extends Component<TProps> {
 
     return (
       <>
-        <MainComponent users={users.items} />
+        <UserList users={users.items} />
       </>
     );
   }

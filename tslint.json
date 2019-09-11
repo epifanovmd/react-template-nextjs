@@ -4,15 +4,18 @@
     "tslint-react"
   ],
   "rules": {
-      "trailing-comma": [true, {
-      "singleline": "never",
-      "multiline": {
-        "objects": "always",
-        "arrays": "always",
-        "functions": "always",
-        "typeLiterals": "ignore"
+    "trailing-comma": [
+      true,
+      {
+        "singleline": "never",
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "always",
+          "typeLiterals": "ignore"
+        }
       }
-    }],
+    ],
     "no-import-side-effect": [
       true,
       {
@@ -68,7 +71,7 @@
     "no-construct": true,
     "no-duplicate-super": true,
     "no-duplicate-variable": true,
-    "no-empty": true,
+    "no-empty": false,
     "no-eval": true,
     "no-for-in-array": true,
     "no-inferred-empty-object-type": true,
@@ -175,6 +178,7 @@
       "allow-leading-underscore",
       "allow-pascal-case"
     ],
+    "jsx-curly-spacing": false,
     "whitespace": [
       true,
       "check-branch",
@@ -185,6 +189,7 @@
       "check-typecast",
       "check-preblock"
     ],
-    "jsx-no-bind": true
+    "jsx-no-bind": true,
+    "jsx-no-multiline-js": false
   }
 }

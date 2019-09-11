@@ -1,10 +1,10 @@
 /*tslint:disable*/
 import {BaseRequest} from "./BaseRequest";
-import {Users} from "./dto/Users.g";
 import {RequestType} from "../common/requestType";
+import {IUsers} from "./dto/Users.g";
 
 export class UsersApiRequest extends BaseRequest {
-  get(config?: Object): Promise<Users[]> {
+  get(config?: Object): Promise<IUsers[]> {
     return this.fetch(
       `/api/users`,
       Object.assign({
