@@ -5,7 +5,7 @@ import {requestRepository} from "../../api/RequestsRepository.g";
 import {popup} from "../../common/popup";
 import {IUsers} from "../../api/dto/Users.g";
 
-export class UsersPageThunk{
+export class UsersPageThunk {
   static getUsers(callback?: (users: IUsers[]) => void): SimpleThunk {
     return async (dispatch: Dispatch<any>): Promise<void> => {
       const params = {};

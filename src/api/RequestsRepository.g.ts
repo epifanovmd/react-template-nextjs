@@ -1,6 +1,6 @@
 import {UsersApiRequest} from "./UsersApiRequest.g";
 
-export class RequestsRepository{
+export class RequestsRepository {
   usersApiRequest = new UsersApiRequest();
 }
 

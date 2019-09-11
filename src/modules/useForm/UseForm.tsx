@@ -54,8 +54,8 @@ export const UseFormComponent = (): JSX.Element => {
 
   return (
     <div>
-      {console.log('errors', errors)}
-      {console.log('touchedValues', touchedValues)}
+      {console.log("errors", errors)}
+      {console.log("touchedValues", touchedValues)}
       <form onSubmit={handleSubmit}>
         <h4>
           Add Guest

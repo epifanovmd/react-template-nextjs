@@ -6,18 +6,17 @@
     "prod": "next build && cross-env NODE_ENV=production PORT=3000 node server.js",
     "stage": "next build && cross-env NODE_ENV=production PORT=3000 node server.js",
     "test": "next build && cross-env NODE_ENV=production PORT=3000 node server.js",
-    "build": "next build"
+    "build": "next build",
+    "lint": "tslint \"src/**/*{.ts,.tsx}\"",
+    "lint:fix": "tslint --fix \"src/**/*{.ts,.tsx}\""
   },
   "dependencies": {
     "autoprefixer": "^9.4.6",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "font-awesome": "^4.7.0",
-    "formik": "^1.4.3",
     "http-proxy-middleware": "^0.19.1",
     "isomorphic-unfetch": "^3.0.0",
     "loaders.css": "^0.1.2",
-    "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "next": "latest",
     "next-fonts": "^0.17.0",

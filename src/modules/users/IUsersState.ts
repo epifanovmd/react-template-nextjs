@@ -10,5 +10,5 @@ export const usersInitialState: IUsersState = {
   users: {
     items: [],
     loadState: LoadState.needLoad,
-  }
+  },
 };

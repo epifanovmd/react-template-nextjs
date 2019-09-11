@@ -7,17 +7,21 @@ import {UserList} from "../../components/userList/userList";
 interface IProps {
 }
 
-type TProps = IProps &
+type TProps =
+  IProps &
   ReturnType<typeof usersSelector.mapState> &
   ReturnType<typeof usersSelector.mapDispatch>;
 
 class UsersStatic extends Component<TProps> {
-  componentDidMount(): void {
-    const {getUsers} = this.props;
-    getUsers((result) => console.log(result));
+  componentDidMount() {
+    this.props.getUsers((result) => {
+      console.log("-------", result);
+    });
+
+    console.log("+++++++++");
   }
 
-  public render(): JSX.Element {
+  public render() {
     const {users} = this.props;
 
     return (
