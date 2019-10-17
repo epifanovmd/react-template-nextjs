@@ -11,44 +11,44 @@
     "lint:fix": "tslint --fix \"src/**/*{.ts,.tsx}\""
   },
   "dependencies": {
-    "autoprefixer": "^9.4.6",
-    "cross-env": "^5.2.0",
-    "express": "^4.16.4",
-    "http-proxy-middleware": "^0.19.1",
     "isomorphic-unfetch": "^3.0.0",
     "loaders.css": "^0.1.2",
-    "moment": "^2.24.0",
     "next": "latest",
-    "next-fonts": "^0.17.0",
-    "next-images": "^1.0.1",
-    "npm": "^6.5.0",
+    "next-fonts": "^0.19.0",
+    "next-images": "^1.2.0",
     "postcss-loader": "^3.0.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "luxon": "^1.19.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-loaders": "^3.0.1",
-    "react-localization": "^1.0.13",
     "react-redux": "^7.1.1",
-    "react-responsive-modal": "^3.6.0",
+    "react-responsive-modal": "^4.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
-    "typescript-fsa": "^3.0.0-beta-2",
-    "typescript-fsa-reducers": "^1.1.0"
+    "typescript-fsa": "^3.0.0",
+    "typescript-fsa-reducers": "^1.2.1"
   },
   "license": "ISC",
   "devDependencies": {
-    "@types/lodash": "^4.14.118",
-    "@types/next": "^7.0.5",
-    "@types/react": "^16.7.6",
-    "@types/react-dom": "^16.0.9",
-    "@types/react-redux": "^7.1.2",
+    "@types/next": "^8.0.6",
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-redux": "^7.1.4",
     "@types/redux": "^3.6.0",
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-typescript": "^1.1.1",
-    "node-sass": "^4.10.0",
+    "autoprefixer": "^9.6.5",
+    "cross-env": "^6.0.3",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "^0.20.0",
+    "node-sass": "^4.12.0",
     "redux-devtools-extension": "^2.13.8",
-    "tslint": "^5.11.0",
-    "tslint-react": "^3.6.0",
-    "typescript": "^3.1.6"
-  }
+    "tslint": "^5.20.0",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.4"
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ]
 }

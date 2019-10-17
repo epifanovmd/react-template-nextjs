@@ -1,9 +1,10 @@
 const autoprefixer = require('autoprefixer');
+const browserList = require('./package');
 
 module.exports = {
   plugins: [
     autoprefixer({
-      browsers: ["cover 99.5%"],
+      overrideBrowserslist: browserList.browserslist
     }),
   ],
 };
