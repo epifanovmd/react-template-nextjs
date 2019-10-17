@@ -34,7 +34,7 @@ export const useForm = <T extends {}>({ initialValues, onSubmit, validate }: IUs
     });
   };
 
-  const handleBlur = (event: React.FocusEvent<HTMLInputElement>): void => {
+  const handleBlur = (event: React.FocusEvent<HTMLInputElement>) => {
     const target = event.target;
     const name = target.name;
     setTouchedValues({
@@ -47,7 +47,7 @@ export const useForm = <T extends {}>({ initialValues, onSubmit, validate }: IUs
     });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const e = validate && validate(values) || {};
     setErrors({

@@ -7,7 +7,7 @@ interface IProps {
 }
 
 export class UserList extends React.Component<IProps> {
-  public render(): JSX.Element {
+  public render() {
     const {users} = this.props;
 
     return (

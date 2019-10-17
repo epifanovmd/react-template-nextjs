@@ -1,3 +1,3 @@
-export function showInDevelopAlert(): void {
+export function showInDevelopAlert() {
   alert("This feature is not ready yet.");
 }

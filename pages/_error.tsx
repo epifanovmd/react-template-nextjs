@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 //tslint:disable-next-line:no-default-export
 export default class Error extends React.Component {
-  public render(): JSX.Element {
+  public render() {
     return (
       <>
         <Head>

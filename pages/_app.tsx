@@ -11,7 +11,7 @@ interface IComponentWithStoreProps {
 }
 
 class MyApp extends App<IComponentWithStoreProps> {
-  public render(): JSX.Element {
+  public render() {
     const {Component, pageProps, store} = this.props;
 
     return (

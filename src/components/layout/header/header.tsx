@@ -8,7 +8,7 @@ interface IState {
 }
 
 export class Header extends Component<IProps, IState> {
-  render(): JSX.Element {
+  render() {
     return (
       <>
         <header className="header">

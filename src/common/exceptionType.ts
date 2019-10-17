@@ -72,6 +72,6 @@ export function getExceptionText(e: ExceptionType | string): string {
   }
 }
 
-export function isErrorOfType(error: ExceptionType | null, type: ExceptionType): boolean {
+export function isErrorOfType(error: ExceptionType | null, type: ExceptionType) {
   return error == type;
 }

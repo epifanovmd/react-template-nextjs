@@ -3,13 +3,13 @@ import {useForm} from "../../common/useForm";
 import {useDispatch, useSelector} from "react-redux";
 import {IAppState} from "../../store/IAppState";
 import {IUsers} from "../../api/dto/Users.g";
-import {UsersPageThunk} from "../users/usersPageThunk";
+import {UsersThunk} from "../users/usersThunk";
 
 interface IUseFormMapStateToProps {
   users: IUsers[];
 }
 
-export const UseFormComponent = (): JSX.Element => {
+export const UseFormComponent = () => {
   const {
     values,
     errors,
@@ -22,10 +22,10 @@ export const UseFormComponent = (): JSX.Element => {
       name: "",
       name1: "",
     },
-    onSubmit: (submitValues, e): void => {
+    onSubmit: (submitValues, e) => {
       alert(JSON.stringify({values: submitValues, errors: e}, null, 2));
     },
-    validate: (validateValues): Partial<typeof validateValues> => {
+    validate: (validateValues) => {
       const validateErrors: Partial<typeof validateValues> = {};
       if (validateValues.name == "") {
         validateErrors.name = "Введите имя";
@@ -45,7 +45,7 @@ export const UseFormComponent = (): JSX.Element => {
 
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(UsersPageThunk.getUsers());
+    dispatch(UsersThunk.getUsers());
   }, []);
 
   const props = useSelector(((state: IAppState): IUseFormMapStateToProps => ({
